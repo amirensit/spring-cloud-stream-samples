@@ -32,6 +32,10 @@ curl -H "Content-Type: application/json" -X POST -d '{"id":"customerId-1","bill-
 
 curl -H "Content-Type: application/json" -X POST -d '{"id":"customerId-2","bill-pay":"150"}' http://localhost:8080
 
+For windows terminal, the curl command should be like this:
+
+curl -H "Content-Type: application/json" -X POST -d "{\"id\":\"customerId-1\",\"bill-pay\":\"100\"}" http://localhost:8080
+
 The destinations 'customerId-1' and 'customerId-2' are created as topics on Kafka and the data is published to the appropriate destinations dynamically.
 
 Do the above HTTP post a few times and watch the output appear on the corresponding dynamically created topics.
